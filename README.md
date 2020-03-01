@@ -26,7 +26,7 @@ aircrack-ng -z <.CAP FILENAME>
 
 ### Cracking clientless WEP network
 
-#### KoreK
+#### KoreK chopchop attack
 
 ```
 airmon-ng start <INTERFACE> <CHANNEL>
@@ -38,7 +38,7 @@ aireplay-ng -2 -r <PACKET FILENAME> wlan0mon
 aircrack-ng <.CAP FILENAME>
 ```
 
-#### Fragmentation
+#### Fragmentation attack
 
 ```
 airmon-ng start <INTERFACE> <CHANNEL>
