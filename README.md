@@ -71,3 +71,11 @@ aircrack-ng <.CAP FILENAME>
 ## WPA/WPA2 (Wi-Fi Protected Access)
 
 ### Pre-Shared Key authentication
+
+
+---
+
+## References
+
+https://blog.fabiopires.pt/cracking-wifi-my-personal-notes-part-1-of-3-wep/
+
