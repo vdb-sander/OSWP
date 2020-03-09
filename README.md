@@ -92,18 +92,6 @@ aircrack-ng -w <WORDLIST> <.CAP FILENAME>
 aircrack-ng -r <DB NAME> <.CAP FILENAME>
 ```
 
-#### Cracking WPA with John the Ripper (JTR)
-
-```
-./john --wordlist=<WORDLIST> --rules --stdout | aircrack-ng -e <ESSID> -w - <.CAP FILENAME>
-```
-
-#### Cracking WPA with CoWPAtty
-
-```
-cowpatty -r <.CAP FILENAME> -f <WORDLIST> -2 -s <ESSID>
-```
-
 #### Cracking WPA with Pyrit
 
 ```
@@ -125,6 +113,18 @@ pyrit -i <WORDLIST> import_passwords
 pyrit -e <ESSID> create_essid
 pyrit batch
 pyrit -r <.CAP FILENAME> -b <BSSID> attack_db
+```
+
+#### Cracking WPA with John the Ripper (JTR)
+
+```
+./john --wordlist=<WORDLIST> --rules --stdout | aircrack-ng -e <ESSID> -w - <.CAP FILENAME>
+```
+
+#### Cracking WPA with CoWPAtty
+
+```
+cowpatty -r <.CAP FILENAME> -f <WORDLIST> -2 -s <ESSID>
 ```
 
 ---
