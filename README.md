@@ -126,10 +126,3 @@ pyrit -r <.CAP FILENAME> -b <BSSID> attack_db
 ```
 cowpatty -r <.CAP FILENAME> -f <WORDLIST> -s <ESSID>
 ```
-
----
-
-## References
-
-https://blog.fabiopires.pt/cracking-wifi-my-personal-notes-part-1-of-3-wep/
-
