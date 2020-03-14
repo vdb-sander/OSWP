@@ -124,7 +124,7 @@ pyrit -r <.CAP FILENAME> -b <BSSID> attack_db
 #### Cracking WPA with CoWPAtty
 
 ```
-cowpatty -r <.CAP FILENAME> -f <WORDLIST> -2 -s <ESSID>
+cowpatty -r <.CAP FILENAME> -f <WORDLIST> -s <ESSID>
 ```
 
 ---
